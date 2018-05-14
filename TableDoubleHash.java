@@ -6,11 +6,11 @@ public class TableDoubleHash < K , E >
    //      hash(key). If a collision occurs, then next-Index is used to search
    //      forward to find the next open address. When an open address is found
    //      at an index i, then the element itself is placed in data[i] and the
-   //      element’s key is placed at keys[i].
+   //      elementï¿½s key is placed at keys[i].
    //   3. An index i that is not currently used has data[i] and key[i] set to
    //      null.
    //   4. If an index i has been used at some point (now or in the past), then
-   //      hasBeenUsed[i] is true; otherwise it is false.
+   //      hasBeenUsed[i] is true; otherwise it is false.//
    private int manyItems;
    private Object[ ] keys;
    private Object[ ] data;
@@ -104,9 +104,9 @@ public class TableDoubleHash < K , E >
    
    
    private int hash(Object key)
-   // The return value is a valid index of the table’s arrays. The index is
-   // calculated as the remainder when the absolute value of the key’s
-   // hash code is divided by the size of the table’s arrays.
+   // The return value is a valid index of the tableï¿½s arrays. The index is
+   // calculated as the remainder when the absolute value of the keyï¿½s
+   // hash code is divided by the size of the tableï¿½s arrays.
    {
       return Math.abs(key.hashCode( )) % data.length;
    }
@@ -128,10 +128,10 @@ public class TableDoubleHash < K , E >
    * @param <CODE>key</CODE>
    *   the non-null key to use for the new element
    * @param <CODE>element</CODE>
-   *   the new element that’s being added to this table
+   *   the new element thatï¿½s being added to this table
    * <dt><b>Precondition:</b><dd>
    *   If there is not already an element with the specified <CODE>key</CODE>,
-   *   then this table’s size must be less than its capacity 
+   *   then this tableï¿½s size must be less than its capacity 
    *   (i.e., <CODE>size() < capacity()</CODE>). Also, neither <CODE>key</CODE>
    *   nor </CODE>element</CODE> is null.
    * <dt><b>Postcondition:</b><dd>
